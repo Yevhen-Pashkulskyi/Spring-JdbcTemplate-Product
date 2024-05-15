@@ -12,6 +12,9 @@ public class Product {
     private Integer quota;
     private Double price;
 
+    public Product(){
+    }
+
     public Product(String name, int quota, double price) {
         this.name = name;
         this.quota = quota;
