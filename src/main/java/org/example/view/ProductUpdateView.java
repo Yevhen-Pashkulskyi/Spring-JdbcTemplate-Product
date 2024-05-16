@@ -14,5 +14,12 @@ public class ProductUpdateView {
         String title = "Input name product: ";
         System.out.print(title);
         map.put("name", sc.nextLine().trim());
+        title = "Input quota: ";
+        System.out.print(title);
+        map.put("quota", sc.nextLine().trim());
+        title = "Input price: ";
+        System.out.print(title);
+        map.put("price", sc.nextLine().trim());
+        return map;
     }
 }
