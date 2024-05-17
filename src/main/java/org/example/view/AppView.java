@@ -21,7 +21,9 @@ public class AppView {
         return option;
     }
 
+
     public void showMenu() {
+
         System.out.println("""
                 Menu
                 1- Create Product
@@ -31,7 +33,8 @@ public class AppView {
                 5- Delete product
                 0- Exit program.""");
 
-        System.out.println("Input your choice: ");
+        System.out.print("Input your choice: ");
+
     }
 
     public void getOutput(String output) {
