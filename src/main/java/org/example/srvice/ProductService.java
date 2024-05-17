@@ -4,7 +4,7 @@ import org.example.entity.Product;
 import org.example.exception.ProductDataException;
 import org.example.repository.impl.ProductRepository;
 import org.example.utils.Constants;
-import org.example.utils.ReggexValidator;
+import org.example.utils.RegexValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -120,7 +120,7 @@ public class ProductService {
     }
 
     private void validateRegx(String id) {
-        if (ReggexValidator.isValid(id)){
+        if (RegexValidator.isValid(id)){
             errors.put("id", Constants.ID_ERR_MSG);
         }
     }
