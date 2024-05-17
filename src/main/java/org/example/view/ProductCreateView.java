@@ -1,7 +1,10 @@
 package org.example.view;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Scanner;
 
+@Component
 public class ProductCreateView {
     public String[] getData() {
         Scanner sc = new Scanner(System.in);
@@ -16,7 +19,8 @@ public class ProductCreateView {
         double price = sc.nextDouble();
         return new String[]{title, name, String.valueOf(quota), String.valueOf(price)};
     }
-    public void getOutput(String output){
+
+    public void getOutput(String output) {
         System.out.println(output);
     }
 }
