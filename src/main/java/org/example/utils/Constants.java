@@ -1,9 +1,13 @@
 package org.example.utils;
 
 public final class Constants {
-    private Constants() {}
+
+    private Constants() {
+
+    }
+
     public static final String ID_ERR_MSG = "id error";
-    public static final String NAME_ERR_MSG = "name error";
+//    public static final String NAME_ERR_MSG = "name error";
 
     public final static String DATA_ABSENT_MSG = "\n>> No data!";
     public final static String DATA_INSERT_MSG = "\n>> Created.";

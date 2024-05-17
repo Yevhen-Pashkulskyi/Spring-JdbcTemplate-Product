@@ -12,7 +12,7 @@ public class Product {
     private String quota;
     private String price;
 
-    public Product(){
+    public Product() {
     }
 
     public Product(String name, String quota, String price) {
@@ -83,11 +83,9 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", quota=" + quota +
-                ", price=" + price +
-                '}';
+        return "id=" + this.getId() +
+                ", name='" + this.getName() + '\'' +
+                ", quota=" + this.getQuota() +
+                ", price=" + this.getPrice() + "\n";
     }
 }

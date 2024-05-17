@@ -63,7 +63,7 @@ public class ProductService {
                 return e.getErrors(errors);
             }
         }
-        Optional<Product> optional = productRepository.findById(Long.parseLong(id));
+        Optional<Product> optional = productRepository.fetchById(Long.parseLong(id));
         if (optional.isEmpty()) {
             return Constants.DATA_ABSENT_MSG;
         }else {

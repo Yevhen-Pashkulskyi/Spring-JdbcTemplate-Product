@@ -9,7 +9,7 @@ public class ProductReadByIdView {
     public String getData() {
         Scanner sc = new Scanner(System.in);
         String title = "Input id: ";
-        System.out.println(title);
+        System.out.print(title);
         return sc.nextLine();
     }
 

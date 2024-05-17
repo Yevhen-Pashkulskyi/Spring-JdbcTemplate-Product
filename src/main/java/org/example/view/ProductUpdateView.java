@@ -20,6 +20,12 @@ public class ProductUpdateView {
         title = "Input price: ";
         System.out.print(title);
         map.put("price", sc.nextLine().trim());
+        title = "Input id: ";
+        System.out.print(title);
+        map.put("id", sc.nextLine().trim());
         return map;
+    }
+    public void getOutput(String output){
+        System.out.println(output);
     }
 }

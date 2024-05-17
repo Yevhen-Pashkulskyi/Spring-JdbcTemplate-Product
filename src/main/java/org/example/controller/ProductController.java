@@ -44,6 +44,7 @@ public class ProductController {
         String[] data = createView.getData();
         Product product = new Product(data[0], data[1], data[2]);
         createView.getOutput(service.create(product));
+        AppStarter.startApp();
     }
 
     private void getAll() {
@@ -53,6 +54,7 @@ public class ProductController {
 
     private void getById() {
         readByIdView.getOutput(service.getById(readByIdView.getData()));
+        AppStarter.startApp();
     }
 
     private void update() {

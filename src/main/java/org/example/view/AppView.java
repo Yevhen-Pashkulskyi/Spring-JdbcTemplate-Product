@@ -21,7 +21,7 @@ public class AppView {
         return option;
     }
     public void showMenu(){
-        System.out.print("""
+        System.out.println("""
                 Menu
                 1- Create Product
                 2- Show All Products
@@ -29,7 +29,7 @@ public class AppView {
                 4- Update product
                 5- Delete product
                 0- Exit program.""");
-        System.out.println("Input your choice: ");
+        System.out.print("Input your choice: ");
     }
     public void getOutput(String output){
         if(output.equals(Constants.APP_CLOSE_MSG))
