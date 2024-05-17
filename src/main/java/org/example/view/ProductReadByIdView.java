@@ -1,7 +1,10 @@
 package org.example.view;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Scanner;
 
+@Component
 public class ProductReadByIdView {
     public String getData() {
         Scanner sc = new Scanner(System.in);
@@ -9,7 +12,8 @@ public class ProductReadByIdView {
         System.out.println(title);
         return sc.nextLine();
     }
-    public void getOutput(String output){
+
+    public void getOutput(String output) {
         System.out.println(output);
     }
 }
