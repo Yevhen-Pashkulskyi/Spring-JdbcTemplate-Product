@@ -13,13 +13,13 @@ import java.util.Optional;
 
 @Component
 public class ProductRepository implements AppRepository<Product> {
-    private final Product product;
+
     JdbcTemplate jdbcTemplate;
 
     @Autowired
-    public ProductRepository(DataSource dataSource, Product product) {
+    public ProductRepository(DataSource dataSource) {
         jdbcTemplate = new JdbcTemplate(dataSource);
-        this.product = product;
+
     }
 
     @Override
@@ -41,8 +41,7 @@ public class ProductRepository implements AppRepository<Product> {
         return optional;
     }
 
-    @Override
-    public Optional<Product> findById(Long id) {
+    public Optional<Product> fetchById(Long id) {
         String sql = "SELECT * FROM product WHERE id = ? LIMIT 1";
         Optional<Product> optional;
         try {
@@ -56,7 +55,7 @@ public class ProductRepository implements AppRepository<Product> {
 
     @Override
     public boolean update(Product obj) {
-        Optional<Product> optional = findById(obj.getId());
+        Optional<Product> optional = fetchById(obj.getId());
         if (optional.isEmpty()) return false;
         else {
             String sql = "UPDATE product SET name = ?, quota = ?, price = ? WHERE id = ?";
@@ -66,7 +65,7 @@ public class ProductRepository implements AppRepository<Product> {
 
     @Override
     public boolean delete(Product obj) {
-        Optional<Product> optional = findById(obj.getId());
+        Optional<Product> optional = fetchById(obj.getId());
         if (optional.isEmpty()) return false;
         else {
             String sql = "DELETE FROM product WHERE id = ?";

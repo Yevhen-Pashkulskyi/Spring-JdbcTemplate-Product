@@ -13,11 +13,11 @@ public class ProductCreateView {
         String name = sc.nextLine().trim();
         title = "Input quota: ";
         System.out.println(title);
-        int quota = sc.nextInt();
+        String quota = sc.nextLine().trim();
         title = "Input price: ";
         System.out.println(title);
-        double price = sc.nextDouble();
-        return new String[]{title, name, String.valueOf(quota), String.valueOf(price)};
+        String price = sc.nextLine().trim();
+        return new String[]{name, quota, price};
     }
 
     public void getOutput(String output) {
