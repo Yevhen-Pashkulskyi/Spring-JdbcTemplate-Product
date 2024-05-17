@@ -9,19 +9,19 @@ import java.util.Objects;
 public class Product {
     private Long id;
     private String name;
-    private Integer quota;
-    private Double price;
+    private String quota;
+    private String price;
 
     public Product(){
     }
 
-    public Product(String name, int quota, double price) {
+    public Product(String name, String quota, String price) {
         this.name = name;
         this.quota = quota;
         this.price = price;
     }
 
-    public Product(long id, String name, int quota, double price) {
+    public Product(long id, String name, String quota, String price) {
         this.id = id;
         this.name = name;
         this.quota = quota;
@@ -65,19 +65,19 @@ public class Product {
         this.name = name;
     }
 
-    public int getQuota() {
+    public String getQuota() {
         return quota;
     }
 
-    public void setQuota(int quota) {
+    public void setQuota(String quota) {
         this.quota = quota;
     }
 
-    public double getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
