@@ -7,7 +7,7 @@ import java.util.Objects;
 @Component
 
 public class Product {
-    private Integer id;
+    private Long id;
     private String name;
     private Integer quota;
     private Double price;
@@ -21,7 +21,7 @@ public class Product {
         this.price = price;
     }
 
-    public Product(int id, String name, int quota, double price) {
+    public Product(long id, String name, int quota, double price) {
         this.id = id;
         this.name = name;
         this.quota = quota;
@@ -49,11 +49,11 @@ public class Product {
         return result;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
